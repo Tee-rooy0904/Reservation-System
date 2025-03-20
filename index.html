@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation System Registration</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url('smcc-bg (1).webp');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .card {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 15px;
+            animation: fadeUp 1s ease-in-out;
+            overflow: hidden; 
+        }
+        .card-body {
+            border-radius: 15px; 
+        }
+        .form-group {
+            margin-bottom: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        .form-group:hover {
+            background-color: rgba(255, 255, 255, 0.1); 
+        }
+        .equipments-container {
+            background-color: white;
+            padding: 10px;
+            border-radius: 15px; 
+        }
+        .btn:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        }
+    </style>
+</head>
+<body>
+    <header class="text-center mb-4">
+        <h4 style="font-weight: lighter; font-family:Georgia, 'Times New Roman', Times, serif">
+            <img src="smcc-logo.jpg" alt="#" style="height: 40px; width: 40px;"> SMCC Reservation
+        </h4>
+    </header>
+    <div class="card">
+        <div class="card-body bg-primary">
+            <form>
+                <div class="row">
+                    <div class="col-md-6 form-group text-light">
+                        <label for="id">ID Number</label>
+                        <input type="tel" class="form-control" id="idNo" placeholder="Enter your ID number">
+                    </div>
+                    <div class="col-md-6 form-group text-light">
+                        <label for="role">Role</label>
+                        <select class="form-control" id="role">
+                            <option value="student">Student</option>
+                            <option value="personnel">Personnel</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 form-group text-light">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" placeholder="Enter your full name">
+                    </div>
+                    <div class="col-md-6 form-group text-light">
+                        <label for="sex">Sex</label>
+                        <select class="form-control" id="sex">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 form-group text-light">
+                        <label for="phone">Phone Number</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">+63</span>
+                            </div>
+                            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                        </div>
+                    </div>
+                    <div class="col-md-6 form-group text-light">
+                        <label for="date">Reservation Date</label>
+                        <input type="date" class="form-control" id="date">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 form-group text-light">
+                        <label for="time">Reservation Time</label>
+                        <input type="time" class="form-control" id="time">
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="equipments" style="color: white;">Equipments</label><br>
+                        <div class="equipments-container">
+                            <input type="checkbox" id="eq1" name="ledwall" value="ledwall">
+                            <label for="eq1">LED Wall</label><br>
+                            <input type="checkbox" id="eq2" name="cam" value="Livesreaming Camera">
+                            <label for="eq2">Live Streaming Camera</label><br>
+                            <input type="checkbox" id="eq3" name="projector" value="projector">
+                            <label for="eq3">Projector</label><br>
+                            <input type="checkbox" id="eq4" name="microphone" value="microphone">
+                            <label for="eq4">Microphone</label><br>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-light btn-block">Book</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
